@@ -1,10 +1,11 @@
 import Banner from "@/components/Banner";
-import Image from "next/image";
+import RecentRecipesSection from "@/components/RecentRecipes";
 
 export default function Home() {
   return (
     <>
     <Banner />
+    <RecentRecipesSection />
     </>
   );
 }

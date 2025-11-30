@@ -45,8 +45,8 @@ const Navbar = () => {
   );
 
   return (
-    <nav className="sticky top-0 z-50">
-      <div className="m-2 md:w-8/12 w-11/12 mx-auto p-4 rounded-full backdrop-blur-2xl bg-white/50 shadow-lg flex justify-between items-center">
+    <nav className="sticky top-2 z-50">
+      <div className="m-2 md:w-8/12 w-11/12 mx-auto p-4 rounded-full backdrop-blur-xl bg-white/50 shadow-lg flex justify-between items-center">
         
         <Link
           href="/"
