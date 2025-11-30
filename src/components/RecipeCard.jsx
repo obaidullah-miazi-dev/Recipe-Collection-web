@@ -70,7 +70,7 @@ const RecipeCard = ({ data }) => {
 
      
         <Link
-          href={`/recipe/${data.idMeal}`}
+          href={`/recipes/${data.idMeal}`}
           className="block w-full mt-6 text-center py-3 bg-linear-to-r from-green-600 to-teal-600 text-white font-semibold rounded-full hover:from-green-700 hover:to-teal-700 transform hover:scale-105 transition duration-300 shadow-md"
         >
           View Recipe
