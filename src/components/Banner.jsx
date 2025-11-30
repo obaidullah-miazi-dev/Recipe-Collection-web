@@ -37,7 +37,7 @@ const Banner = () => {
         </div>
       </div>
 
-      <div className="w-[500] h-[500] hidden md:block rounded-full absolute top-8 blur-3xl bg-green-100 -z-30"></div>
+      <div className="w-[500] h-[500] hidden md:block rounded-full absolute top-8 blur-3xl bg-green-200 -z-30 animate-pulse"></div>
       <div className="w-[500] h-[500] rounded-full absolute top-46 right-8 blur-3xl bg-green-100 -z-30"></div>
       </div>
 

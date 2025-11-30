@@ -28,14 +28,14 @@ const Navbar = () => {
         Recipes
       </Link>
       <Link
-        href="/about"
+        href="/"
         className="hover:text-green-600 transition"
         onClick={closeMenu}
       >
         About Us
       </Link>
       <Link
-        href="/contact"
+        href="/"
         className="hover:text-green-600 transition"
         onClick={closeMenu}
       >

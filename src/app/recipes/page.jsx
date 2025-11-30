@@ -34,7 +34,7 @@ const Recipes = () => {
         </p>
       </div>
 
-      <div className="flex justify-center mb-10 w-4/12 mx-auto relative">
+      <div className="flex justify-center mb-10 md:w-4/12 w-6/12 mx-auto relative">
         <input
           type="text"
           value={searchText}
@@ -46,7 +46,7 @@ const Recipes = () => {
         <Search className="absolute right-2 top-1.5" />
       </div>
 
-      <div className="grid grid-cols-4 gap-12">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-12">
         {recipes?.map((recipe) => (
           <RecipeCard key={recipe.idMeal} data={recipe} />
         ))}
