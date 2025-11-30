@@ -49,7 +49,7 @@ const RecipeCard = ({ data }) => {
         </div>
 
 
-        <div className="pt-2">
+        <div className="pt-2 md:h-30">
           <p className="text-sm text-gray-500 mb-2">Key ingredients:</p>
           <div className="flex flex-wrap gap-2">
             {ingredients.slice(0, 4).map((item, idx) => (

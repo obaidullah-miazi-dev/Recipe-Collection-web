@@ -1,15 +1,29 @@
+"use client";
 import RecipeCard from "@/components/RecipeCard";
-import React from "react";
+import { Search } from "lucide-react";
+import React, { useEffect, useState } from "react";
 
-const page = async () => {
-  const res = await fetch(
-    "https://www.themealdb.com/api/json/v1/1/search.php?s="
-  );
-  const data = await res.json();
-//   console.log(data.meals);
+const Recipes = () => {
+  const [searchText, setSearchText] = useState("");
+  const [recipes,setRecipes] = useState()
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetch(
+        `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchText}`
+      );
+      const data = await res.json();
+      setRecipes(data.meals || []);
+    };
+
+    fetchData();
+  }, [searchText]);
+
+  const filteredRecipe = recipes?.filter(recipe => recipe.strMeal.toLocaleLowerCase().includes(searchText.toLocaleLowerCase()))
+  console.log(filteredRecipe)
+
   return (
     <div className="mt-16 w-11/12 mx-auto">
-      <div className="text-center py-16 mx-auto px-4">
+      <div className="text-center py-10 mx-auto px-4">
         <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 mb-4">
           Discover Your Next
           <span className="text-green-600"> Favorite Recipe</span>
@@ -20,13 +34,25 @@ const page = async () => {
         </p>
       </div>
 
+      <div className="flex justify-center mb-10 w-4/12 mx-auto relative">
+        <input
+          type="text"
+          value={searchText}
+          placeholder="Search"
+          className="outline-green-500 border py-1.5 px-2 rounded-full  border-green-500 w-full"
+          onChange={(e) => setSearchText(e.target.value)}
+        />
+
+        <Search className="absolute right-2 top-1.5" />
+      </div>
+
       <div className="grid grid-cols-4 gap-12">
-        {
-        data.meals.map(recipe => <RecipeCard key={recipe.idMeal} data={recipe}/>)
-      }
+        {recipes?.map((recipe) => (
+          <RecipeCard key={recipe.idMeal} data={recipe} />
+        ))}
       </div>
     </div>
   );
 };
 
-export default page;
+export default Recipes;

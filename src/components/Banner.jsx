@@ -4,7 +4,7 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div className="flex justify-between flex-col md:flex-row gap-12 items-center w-11/12 mx-auto mt-32 relative">
+    <div className="flex justify-between flex-col md:flex-row gap-12 items-center w-11/12 mx-auto md:mt-32 mt-12 relative">
       <div>
         <div className="flex flex-col  justify-center md:justify-start items-center md:items-start">
         <h1 className="text-5xl text-center md:text-left font md:text-8xl font-bold text-gray-800 leading-tight">
@@ -37,7 +37,7 @@ const Banner = () => {
         </div>
       </div>
 
-      <div className="w-[500] h-[500] rounded-full absolute top-8 blur-3xl bg-green-100 -z-30"></div>
+      <div className="w-[500] h-[500] hidden md:block rounded-full absolute top-8 blur-3xl bg-green-100 -z-30"></div>
       <div className="w-[500] h-[500] rounded-full absolute top-46 right-8 blur-3xl bg-green-100 -z-30"></div>
       </div>
 
